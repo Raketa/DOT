@@ -1,4 +1,4 @@
-package com.moc;
+package com.moc.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping
-public class HelloServlet {
+public class ErrorController {
 
-    @GetMapping(value = "/sayHello")
-    public String doGet() {
-        return "/main";
+    @GetMapping(value = "/errors")
+    protected String error() {
+        return "jsp/page404";
     }
 }
