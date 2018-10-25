@@ -10,7 +10,7 @@
 
     <error-page>
         <error-code>404</error-code>
-        <location>/error</location>
+        <location>/errors</location>
     </error-page>
 
     <servlet>
@@ -25,20 +25,14 @@
         <load-on-startup>1</load-on-startup>
     </servlet>
 
-    <servlet>
-        <servlet-name>errorServlet</servlet-name>
-        <servlet-class>com.moc.ErrorServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>errorServlet</servlet-name>
-        <url-pattern>/error</url-pattern>
-    </servlet-mapping>
-
     <servlet-mapping>
         <servlet-name>helloServlet</servlet-name>
         <url-pattern>/sayHello</url-pattern>
     </servlet-mapping>
 
+    <servlet-mapping>
+        <servlet-name>helloServlet</servlet-name>
+        <url-pattern>/errors</url-pattern>
+    </servlet-mapping>
 
 </web-app>

@@ -1,25 +1,13 @@
 <%@ page import="java.util.Map" %>
-<%@ taglib uri = "http://java.sun.com/jsp/jstl/core" prefix = "c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Hello</title>
-</head>
-<body>
-<h2>404, <%= request.getRemoteAddr() %>!</h2>
-<%
-    final Map map = request.getParameterMap();
-    session.setAttribute("params", map );
-%>
-
-<c:forEach items="${params}" var="entry">
-    <p><b>${entry.key}</b>
-        <c:forEach items="${entry.value}" var="val">
-            <i>${val}</i>
-        </c:forEach>
-    </p>
-</c:forEach>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <title>Hello</title>
+    </head>
+    <body style="text-align: center">
+        <img src="resources/404.jpg" alt="404" style="height: 98%">
+    </body>
 </html>
